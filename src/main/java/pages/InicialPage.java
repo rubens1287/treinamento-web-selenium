@@ -11,8 +11,6 @@ import support.report.Report;
 
 public class InicialPage extends DriverManager {
 
-
-
     public void acessarAplicacao(){
         getDriver().get(configuration.url());
     }

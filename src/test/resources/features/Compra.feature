@@ -8,6 +8,7 @@ Funcionalidade: Compra
   Cenario: Comprar um produto
     Dado acessar aplicacao
     Quando o cliente escolher o produto "Blouse"
-    E proceder para o checkout ""
-    E proceder para o checkout "//p"
+    E proceder para o checkout "detalhe"
+    E proceder para o checkout "compra"
+    E crio uma conta
  #   Entao deve ser apresentado compra com sucesso

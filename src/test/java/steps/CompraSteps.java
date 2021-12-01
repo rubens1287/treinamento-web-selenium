@@ -1,19 +1,32 @@
 package steps;
 
 import cucumber.api.java.pt.E;
-import cucumber.api.java.pt.Quando;
-import pages.CartSummary;
+import pages.CreateAccountPage;
+import pages.SignInPage;
+import pages.SummaryPage;
 
 public class CompraSteps {
 
-    CartSummary cartSummary;
+    SummaryPage cartSummary;
+    SignInPage signInPage;
+    CreateAccountPage createAccountPage;
 
     public CompraSteps() {
-        cartSummary = new CartSummary();
+
+        cartSummary = new SummaryPage();
+        signInPage = new SignInPage();
+        createAccountPage = new CreateAccountPage();
     }
 
     @E("proceder para o checkout {string}")
-    public void procederParaOCheckout(String type) {
-        cartSummary.procedeToCheckout(type);
+    public void procederParaOCheckout(String action) {
+        cartSummary.proceedToCheckout(action);
+    }
+
+    @E("crio uma conta")
+    public void crioUmaConta() {
+        signInPage.createAccount();
+        createAccountPage.fillPersonalInformation();
+        createAccountPage.fillAddressInfo();
     }
 }
