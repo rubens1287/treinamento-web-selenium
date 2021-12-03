@@ -11,4 +11,8 @@ Funcionalidade: Compra
     E proceder para o checkout "detalhe"
     E proceder para o checkout "compra"
     E crio uma conta
+    Entao eu valido o endereco "Rua Libia, 10 "
+    Quando ele confirma o endereco e segue em frente
+    E aceita os termos da entrega
+    Entao valida os produto na tabela de pagamento
  #   Entao deve ser apresentado compra com sucesso
