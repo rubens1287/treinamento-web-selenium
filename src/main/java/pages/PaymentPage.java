@@ -30,7 +30,7 @@ public class PaymentPage extends DriverManager {
 
 
     public void choosePaymentModel(){
-        getDriver().findElement(By.className("btnPayByBankWire")).click();
+        getDriver().findElement(By.className("payment_module")).click();
     }
 
     public void confirmar(){
@@ -40,7 +40,6 @@ public class PaymentPage extends DriverManager {
 
     public void checkStatusCompra(){
         Verifications.verifyElementExists(By.xpath("//strong[contains(text(),'Your order on My Store is complete.')]"));
-
     }
 
 
