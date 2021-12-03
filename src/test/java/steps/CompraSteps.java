@@ -62,6 +62,17 @@ public class CompraSteps {
     public void validaOsProdutoNaTabelaDePagamento() {
         Map expected = DataYaml.getMapYamlValues("Usuarios","produtos");
         assertThat(paymentPage.checkTable(), is(expected));
-        ;
+
+    }
+
+    @E("confirma a compra")
+    public void confirmaACompra() {
+        paymentPage.choosePaymentModel();
+        paymentPage.confirmar();
+    }
+
+    @E("valida se a compra foi efetuada com sucesso")
+    public void validaSeACompraFoiEfetuadaComSucesso() {
+        paymentPage.checkStatusCompra();
     }
 }

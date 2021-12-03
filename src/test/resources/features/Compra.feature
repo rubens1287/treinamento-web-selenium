@@ -15,4 +15,6 @@ Funcionalidade: Compra
     Quando ele confirma o endereco e segue em frente
     E aceita os termos da entrega
     Entao valida os produto na tabela de pagamento
+    E confirma a compra
+    E valida se a compra foi efetuada com sucesso
  #   Entao deve ser apresentado compra com sucesso

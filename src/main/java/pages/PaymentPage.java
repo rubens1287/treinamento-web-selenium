@@ -12,6 +12,7 @@ import java.util.Map;
 public class PaymentPage extends DriverManager {
 
     By btnPayByBankWire = By.className("bankwire");
+    By btnConfirma = By.xpath("//button/span[contains(text(),'I confirm my order')]");
 
     public Map<String,String> checkTable(){
         Verifications.verifyElementIsClickable(btnPayByBankWire);
@@ -25,6 +26,21 @@ public class PaymentPage extends DriverManager {
             }
         }
         return dataTable;
+    }
+
+
+    public void choosePaymentModel(){
+        getDriver().findElement(By.className("btnPayByBankWire")).click();
+    }
+
+    public void confirmar(){
+        Verifications.verifyElementIsClickable(btnConfirma);
+        getDriver().findElement(btnConfirma).click();
+    }
+
+    public void checkStatusCompra(){
+        Verifications.verifyElementExists(By.xpath("//strong[contains(text(),'Your order on My Store is complete.')]"));
+
     }
 
 
